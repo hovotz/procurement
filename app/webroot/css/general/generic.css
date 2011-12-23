@@ -1,0 +1,7 @@
+button {
+	height : 25px;
+}
+
+.lfloat { float:left; }
+.rfloat { float:right; }
+.clear { float:clear; }

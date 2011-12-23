@@ -1,0 +1,28 @@
+table {
+	width : 600px;
+	margin: 0 auto;
+	padding : 10px;
+	border : 2px solid black;
+}
+
+div.table-container {
+	width: 700px;
+	margin: 200px auto;
+}
+
+.table-header {
+	
+}
+
+.table-content {
+	
+}
+
+.table-row {
+	
+}
+
+.table-col {
+	
+}
+
