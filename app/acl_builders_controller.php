@@ -244,6 +244,30 @@ class AcoBuildersController extends AppController {
 	 	}
 	 }
 	 
+	 /**
+	  * 
+	  * set up the permissions of groups (aro)
+	  * Administrators are allowed to do everything
+	  * Users can to this in controller..
+	  * Requests
+	  * 
+	  * 
+	  */
+	 
+	 function build_permissions() {
+	 	// allow everything to admin
+	 	$this->Acl->allow('Administrators', 'controllers');
+	 	
+	 	// set users permissions
+	 	$this->Acl->deny('Users', 'controllers');
+	 	// all to Requests
+	 	$this->Acl->allow('Users', 'controllers/Requests');
+	 	// can only view Items
+	 	$this->Acl->allow('Users', 'controllers/Items/view');
+	 	//can view Users ( of same department)
+	 	$this->Acl->allow('Users', 'controllers/Users/view');
+	 }
+		 
 	 
 	 
 	 

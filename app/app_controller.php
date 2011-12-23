@@ -7,10 +7,15 @@ class AppController extends Controller
 			'Acl',
 			'Auth' => array(
 				'authorize' => 'controller',
+				'actionPath' => 'controllers/',
 				'loginRedirect' => array('controller'=>'requests', 'action'=>'add'),
 				'logoutRedirect' => array('controller'=>'users', 'action'=>'login')
 			),
 			'Session',
 			'RequestHandler'
 	);
+	
+	function beforeFilter() {
+		$this->Auth->allowedActions = array('display');
+	}
 }
