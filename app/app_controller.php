@@ -9,7 +9,9 @@ class AppController extends Controller
 				'authorize' => 'controller',
 				'actionPath' => 'controllers/',
 				'loginRedirect' => array('controller'=>'requests', 'action'=>'add'),
-				'logoutRedirect' => array('controller'=>'users', 'action'=>'login')
+				'logoutRedirect' => array('controller'=>'users', 'action'=>'login'),
+				'authError' => 'Authentication Failed!',
+				'loginError' => 'Invalid login!'
 			),
 			'Session',
 			'RequestHandler'
@@ -18,4 +20,5 @@ class AppController extends Controller
 	function beforeFilter() {
 		$this->Auth->allowedActions = array('display');
 	}
+	
 }

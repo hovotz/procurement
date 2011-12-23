@@ -4,7 +4,6 @@ class UsersController extends AppController {
 	
 	function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('*');
 	}
 	
 	function login() {
@@ -13,10 +12,6 @@ class UsersController extends AppController {
 	
 	function logout() {
 		
-	}
-	
-	function isAuthorized() {
-		return true;
 	}
 	
 	function index() {
